@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+:root {
+  /* Fonts */
+  --font-inter: var(--font-inter);
+  --font-space: var(--font-space-grotesk);
+
+  /* Brand Colors - UCSB Future */
+  --ucsb-navy: #003660;
+  /* Official UCSB Navy */
+  --ucsb-gold: #FEBC11;
+  /* Official UCSB Gold */
+  --ucsb-dark: #030712;
+  /* Rich Black/Navy Background */
+
+  /* Theme Colors */
+  --background: var(--ucsb-dark);
+  --foreground: #F8FAFC;
+  /* Slate 50 */
+
+  --muted: #0F172A;
+  --muted-foreground: #94A3B8;
+
+  --border: #1E293B;
+  --card: rgba(0, 54, 96, 0.4);
+  /* Navy Glass */
+  --card-foreground: #F8FAFC;
+
+  /* Primary Actions */
+  --primary: var(--ucsb-gold);
+  --primary-foreground: #020617;
+  /* Dark text on Gold */
+
+  --secondary: var(--ucsb-navy);
+  --secondary-foreground: #F8FAFC;
+
+  --ucsb-navy-hover: #004b87;
+  /* Lighter Navy */
+}
+
+/* Retro Grid Animation */
+@keyframes grid-move {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space), ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-navy: var(--ucsb-navy);
+  --color-navy-hover: var(--ucsb-navy-hover);
+  --color-gold: var(--ucsb-gold);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+}
+
+/* Utilities */
+.glass {
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
