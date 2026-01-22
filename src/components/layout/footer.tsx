@@ -11,7 +11,7 @@ export function Footer() {
                     <div className="col-span-1 md:col-span-2">
                         <span className="text-xl font-bold text-slate-900 tracking-tight">{CONTENT.nav.logo}</span>
                         <p className="mt-4 text-sm text-slate-600 max-w-xs">
-                            AI-assisted course planning and mastery-based practice for rigorous university instruction.
+                            AI-assisted course planning and mastery-based practice for university instruction.
                         </p>
                     </div>
 
