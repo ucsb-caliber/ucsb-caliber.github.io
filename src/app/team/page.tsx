@@ -6,11 +6,7 @@ export default function TeamPage() {
         <div className="bg-white">
             <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mb-20">
-                    <h1 className="text-4xl font-bold text-slate-900 mb-6 tracking-tight">Building the future of <br /> course planning at UCSB.</h1>
-                    <p className="text-xl text-slate-600 leading-relaxed font-light">
-                        We are a multidisciplinary team of designers, engineers, and learning scientists.
-                        {CONTENT.team.expectations}
-                    </p>
+                    <h1 className="text-4xl font-bold text-slate-900 mb-6 tracking-tight">Building Mastery Based Learning at Scale</h1>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-24">

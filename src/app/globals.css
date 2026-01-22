@@ -5,40 +5,45 @@
   --font-inter: var(--font-inter);
   --font-space: var(--font-space-grotesk);
 
-  /* Brand Colors - UCSB Future */
+  /* Brand Colors - Aurora UI */
   --ucsb-navy: #003660;
-  /* Official UCSB Navy */
+  /* Keep for accent/logo */
   --ucsb-gold: #FEBC11;
-  /* Official UCSB Gold */
-  --ucsb-dark: #030712;
-  /* Rich Black/Navy Background */
+  /* Keep for CTA */
 
-  /* Theme Colors */
-  --background: var(--ucsb-dark);
-  --foreground: #F8FAFC;
-  /* Slate 50 */
+  --aurora-blue: #0080FF;
+  /* Electric Blue */
+  --aurora-purple: #BF00FF;
+  /* Electric Purple */
+  --aurora-cyan: #00FFFF;
+  /* Bright Cyan */
+  --aurora-magenta: #FF1493;
+  /* Vivid Pink */
 
-  --muted: #0F172A;
-  --muted-foreground: #94A3B8;
+  /* Theme Colors - Light/Bright */
+  --background: #ffffff;
+  --foreground: #0f172a;
+  /* Slate 900 */
 
-  --border: #1E293B;
-  --card: rgba(0, 54, 96, 0.4);
-  /* Navy Glass */
-  --card-foreground: #F8FAFC;
+  --muted: #f1f5f9;
+  /* Slate 100 */
+  --muted-foreground: #64748b;
+  /* Slate 500 */
+
+  --border: #e2e8f0;
+  /* Slate 200 */
+  --card: rgba(255, 255, 255, 0.7);
+  --card-foreground: #0f172a;
 
   /* Primary Actions */
-  --primary: var(--ucsb-gold);
-  --primary-foreground: #020617;
-  /* Dark text on Gold */
+  --primary: var(--aurora-blue);
+  --primary-foreground: #ffffff;
 
-  --secondary: var(--ucsb-navy);
-  --secondary-foreground: #F8FAFC;
-
-  --ucsb-navy-hover: #004b87;
-  /* Lighter Navy */
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
 }
 
-/* Retro Grid Animation */
+/* Retro Grid / Blob Animation */
 @keyframes grid-move {
   0% {
     transform: translateY(0);
@@ -87,8 +92,11 @@
   --color-foreground: var(--foreground);
 
   --color-navy: var(--ucsb-navy);
-  --color-navy-hover: var(--ucsb-navy-hover);
   --color-gold: var(--ucsb-gold);
+  --color-aurora-blue: var(--aurora-blue);
+  --color-aurora-purple: var(--aurora-purple);
+  --color-aurora-cyan: var(--aurora-cyan);
+  --color-aurora-magenta: var(--aurora-magenta);
 
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
@@ -98,8 +106,43 @@
 
 /* Utilities */
 .glass {
-  background: rgba(2, 6, 23, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+@keyframes spin-around {
+  0% {
+    transform: translateZ(0) rotate(0);
+  }
+
+  15%,
+  35% {
+    transform: translateZ(0) rotate(90deg);
+  }
+
+  65%,
+  85% {
+    transform: translateZ(0) rotate(270deg);
+  }
+
+  100% {
+    transform: translateZ(0) rotate(360deg);
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translate(calc(100cqw - 100%), 0);
+  }
+}
+
+.animate-spin-around {
+  animation: spin-around calc(var(--speed) * 2) infinite linear;
+}
+
+.animate-slide {
+  animation: slide var(--speed) ease-in-out infinite alternate;
 }

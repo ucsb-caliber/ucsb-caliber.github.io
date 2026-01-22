@@ -33,7 +33,7 @@ export function Navbar() {
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="flex items-center gap-2">
-                            <span className="text-xl font-bold text-white tracking-tight">{CONTENT.nav.logo}</span>
+                            <span className="text-xl font-bold text-slate-900 tracking-tight">{CONTENT.nav.logo}</span>
                         </Link>
                     </div>
 
@@ -44,8 +44,8 @@ export function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors hover:text-ucsb-gold",
-                                    pathname === link.href ? "text-ucsb-gold" : "text-slate-300"
+                                    "text-sm font-medium transition-colors hover:text-aurora-blue",
+                                    pathname === link.href ? "text-aurora-blue" : "text-slate-600"
                                 )}
                             >
                                 {link.label}
@@ -57,7 +57,7 @@ export function Navbar() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-slate-300 hover:text-white focus:outline-none"
+                            className="text-slate-600 hover:text-slate-900 focus:outline-none"
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </button>
