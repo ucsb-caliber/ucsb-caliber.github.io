@@ -38,13 +38,13 @@ export const AuroraBackground = ({
             absolute -inset-[10px] opacity-40 will-change-transform`,
 
                         showRadialGradient &&
-                        `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
+                        `[mask-image:radial-gradient(ellipse_at_100%_0%,black_20%,var(--transparent)_80%)]`
                     )}
                 ></div>
                 {/* Simplified Blob Version if the complex CSS is too heavy or weird */}
-                <div className="absolute top-0 -left-4 w-72 h-72 bg-aurora-purple rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob"></div>
-                <div className="absolute top-0 -right-4 w-72 h-72 bg-aurora-cyan rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-2000"></div>
-                <div className="absolute -bottom-8 left-20 w-72 h-72 bg-aurora-magenta rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-4000"></div>
+                <div className="absolute top-[10%] -left-20 w-[400px] h-[400px] bg-aurora-purple rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob"></div>
+                <div className="absolute top-[30%] -right-20 w-[400px] h-[400px] bg-aurora-cyan rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob animation-delay-2000"></div>
+                <div className="absolute top-[60%] left-1/4 w-[400px] h-[400px] bg-aurora-magenta rounded-full mix-blend-multiply filter blur-[100px] opacity-40 animate-blob animation-delay-4000"></div>
             </div>
             <div className="relative z-10 w-full">{children}</div>
         </div>

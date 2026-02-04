@@ -2,7 +2,7 @@ import { CONTENT } from "@/lib/content";
 
 export function Credibility() {
     return (
-        <section className="bg-transparent border-t border-white/5 py-12 relative z-10">
+        <section className="bg-transparent border-t border-slate-200 py-24 relative z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <p className="text-center text-sm font-bold text-aurora-blue uppercase tracking-widest mb-8">Trusted Foundation</p>
                 <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">

@@ -8,9 +8,9 @@ import RetroGrid from "@/components/ui/retro-grid";
 export default function Home() {
   return (
     <div className="flex flex-col gap-0 relative">
-      <div className="relative pt-20 pb-20 overflow-hidden">
-        <RetroGrid />
-        <div className="relative z-10">
+      <div className="relative overflow-hidden pt-32 pb-32 md:pt-48 md:pb-48">
+        <RetroGrid className="opacity-20" />
+        <div className="relative z-10 text-center">
           <Hero />
         </div>
       </div>

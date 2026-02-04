@@ -3,7 +3,7 @@ import { Info } from "lucide-react";
 
 export function MVPBanner() {
     return (
-        <section className="bg-gradient-to-r from-aurora-blue to-aurora-purple py-16 relative overflow-hidden">
+        <section className="bg-gradient-to-r from-aurora-blue to-aurora-purple py-24 relative overflow-hidden">
             <div className="absolute top-0 right-0 -mr-20 -mt-20 h-[300px] w-[300px] rounded-full bg-white opacity-20 blur-[80px]"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

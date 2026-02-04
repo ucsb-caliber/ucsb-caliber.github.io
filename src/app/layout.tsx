@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google"; // Space Grotesk for th
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { GlobalBackground } from "@/components/layout/global-background";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
+        className={`${inter.variable} ${spaceGrotesk.variable} antialiased bg-background text-foreground flex flex-col min-h-screen relative`}
       >
+        <GlobalBackground />
         <Navbar />
         <main className="flex-grow pt-16">
           {children}

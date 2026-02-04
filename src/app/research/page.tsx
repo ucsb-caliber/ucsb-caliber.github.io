@@ -1,3 +1,5 @@
+import { CONTENT } from "@/lib/content";
+
 export default function ResearchPage() {
     return (
         <article className="py-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,6 +37,30 @@ export default function ResearchPage() {
                         Research shows that 1-sigma improvement in student outcomes is possible when shifting from
                         conventional instruction to mastery learning relative to control groups (Bloom, 1984).
                     </p>
+                </section>
+
+                <section>
+                    <h2 className="text-2xl font-bold text-slate-900 mb-6">Research Log</h2>
+                    <div className="grid gap-6 md:grid-cols-2">
+                        {CONTENT.home.blog.map((post, index) => (
+                            <a
+                                key={index}
+                                href={post.slug}
+                                className="block p-6 bg-white rounded-xl border border-slate-200 hover:border-navy hover:shadow-lg transition-all group"
+                            >
+                                <div className="text-sm text-navy font-semibold mb-2 flex justify-between">
+                                    <span>{post.date}</span>
+                                    <span>{post.readTime}</span>
+                                </div>
+                                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-navy transition-colors">
+                                    {post.title}
+                                </h3>
+                                <p className="text-slate-600">
+                                    {post.summary}
+                                </p>
+                            </a>
+                        ))}
+                    </div>
                 </section>
             </div>
         </article>

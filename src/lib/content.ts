@@ -4,7 +4,7 @@ export const CONTENT = {
         links: [
             // { label: "Instructors", href: "/instructors" },
             { label: "Product", href: "/product" },
-            // { label: "Research", href: "/research" }, // Optional
+            { label: "Research", href: "/research" },
             { label: "Team", href: "/team" },
         ],
         cta: "Request a Pilot",
@@ -62,6 +62,22 @@ export const CONTENT = {
             title: "Current Status: MVP Development",
             description: "Our end-of-quarter goal is a fully scoped instructor frontend and a minimal student frontend for pilots.",
         },
+        blog: [
+            {
+                title: "The Future of Mastery Learning",
+                date: "Mar 15, 2024",
+                summary: "Exploring how AI-driven feedback loops can accelerate student mastery in large-scale computer science courses.",
+                readTime: "5 min read",
+                slug: "#" // Placeholder
+            },
+            {
+                title: "Bloom's Taxonomy in the Age of AI",
+                date: "Feb 28, 2024",
+                summary: "Revisiting educational taxonomies and how generative models can help align assessment with learning outcomes.",
+                readTime: "4 min read",
+                slug: "#" // Placeholder
+            }
+        ]
     },
     instructors: {
         title: "For Instructors",
@@ -93,31 +109,31 @@ export const CONTENT = {
             {
                 name: "Dr. Diba Mirza",
                 role: "Faculty",
-                image: "/Dr,DibaMirza.png",
+                image: "/diba-mirza.png",
                 bio: "Associate Professor of Teaching, UCSB Computer Science."
             },
             {
                 name: "Nikhil Kapasi",
                 role: "Student",
-                image: "/Nikhil Kapasi.png", // Note: Filename has space, handled in src/public? Check copy
+                image: "/nikhil-kapasi.png", // Note: Filename has space, handled in src/public? Check copy
                 bio: "UCSB Computer Science."
             },
             {
                 name: "Derek Kirschbaum",
                 role: "Student",
-                image: "/DerekKirschbaum.png",
+                image: "/derek-kirschbaum.png",
                 bio: "UCSB Computer Science."
             },
             {
                 name: "Aryaman Singh",
                 role: "Student",
-                image: "/AryamanSingh.png",
+                image: "/aryaman-singh.png",
                 bio: "UCSB Computer Science."
             },
             {
                 name: "Sai Vamsi Aliseti",
                 role: "Student",
-                image: "/SaiVamsiAliseti.png",
+                image: "/sai-vamsi-aliseti.png",
                 bio: "UCSB Computer Science."
             },
         ]
