@@ -3,20 +3,23 @@ import Image from "next/image";
 import { getAssetPath } from "@/lib/utils";
 
 export default function TeamPage() {
-    const leadership = CONTENT.team.members.filter(m =>
+    const allMembers = CONTENT.team.members;
+
+    const leadership = allMembers.filter(m =>
         m.role === "Faculty" ||
         m.role === "Graduate Student Mentor" ||
         m.role === "Team Lead" ||
-        m.role === "Leadership" ||
         m.role === "Development Team Lead"
     );
 
-    const rdTeam = CONTENT.team.members.filter(m =>
-        m.role === "Research and Development Team"
+    const rdTeam = allMembers.filter(m =>
+        m.role === "" &&
+        allMembers.indexOf(m) >= 5 && allMembers.indexOf(m) < 10
     );
 
-    const devTeam = CONTENT.team.members.filter(m =>
-        m.role === "Dev Team"
+    const devTeam = allMembers.filter(m =>
+        m.role === "" &&
+        allMembers.indexOf(m) >= 10
     );
 
     return (
@@ -76,7 +79,7 @@ function TeamMemberCard({ member, size = "small" }: TeamMemberCardProps) {
         <div className="group flex flex-col items-center text-center">
             <div className={cn(
                 "relative overflow-hidden rounded-full bg-slate-100 mb-6 border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300 group-hover:shadow-xl group-hover:border-aurora-blue/20",
-                isLarge ? "h-40 w-40" : "h-32 w-32"
+                isLarge ? "h-48 w-48" : "h-40 w-40"
             )}>
                 <Image
                     src={getAssetPath(member.image)}

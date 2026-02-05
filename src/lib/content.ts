@@ -110,7 +110,7 @@ export const CONTENT = {
                 name: "Dr. Diba Mirza",
                 role: "Faculty",
                 image: "/team/diba-mirza.png",
-                bio: "Teaching Professor and Vice Chair."
+                bio: "Teaching Professor and Vice Chair"
             },
             {
                 name: "Sai Vamsi Aliseti",
@@ -139,82 +139,82 @@ export const CONTENT = {
             // R&D Team
             {
                 name: "Mahasvin",
-                role: "Research and Development Team",
+                role: "",
                 image: "/team/mahasvin.jpeg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Mason Le",
-                role: "Research and Development Team",
+                role: "",
                 image: "/team/mason-le.png",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Nandini Dharwadkar",
-                role: "Research and Development Team",
+                role: "",
                 image: "/team/nandini-dharwadkar.jpeg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Olivia He",
-                role: "Research and Development Team",
+                role: "",
                 image: "/team/olivia-he.jpg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Naz Oguz",
-                role: "Research and Development Team",
+                role: "",
                 image: "/team/naz-oguz.png",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             // Dev Team
             {
                 name: "Austin Li",
-                role: "Dev Team",
+                role: "",
                 image: "/team/austin-li.jpg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Devesh Mamidi",
-                role: "Dev Team",
+                role: "",
                 image: "/team/devesh-mamidi.png",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Jay Joo",
-                role: "Dev Team",
+                role: "",
                 image: "/team/jay-joo.jpg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Nathan Ngo",
-                role: "Dev Team",
+                role: "",
                 image: "/team/nathan-ngo.jpg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Nicholas Kamenica",
-                role: "Dev Team",
+                role: "",
                 image: "/team/nicholas-kamenica.jpeg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Pavani Kshirsagar",
-                role: "Dev Team",
+                role: "",
                 image: "/team/pavani-kshirsagar.jpg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Simon Yan",
-                role: "Dev Team",
+                role: "",
                 image: "/team/simon-yan.jpg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Vincent Nguyen",
-                role: "Dev Team",
+                role: "",
                 image: "/team/vincent-nguyen.jpg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
         ]
     },
