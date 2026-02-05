@@ -112,27 +112,27 @@ export const CONTENT = {
                 bio: "Associate Professor of Teaching, UCSB Computer Science."
             },
             {
+                name: "Sai Vamsi Aliseti",
+                role: "Research and Development Team",
+                image: "/sai-vamsi-aliseti.png",
+                bio: "UCSB Computer Science."
+            },
+            {
                 name: "Nikhil Kapasi",
-                role: "Student",
-                image: "/nikhil-kapasi.png", // Note: Filename has space, handled in src/public? Check copy
+                role: "Research and Development Team",
+                image: "/nikhil-kapasi.png",
                 bio: "UCSB Computer Science."
             },
             {
                 name: "Derek Kirschbaum",
-                role: "Student",
+                role: "Dev Team Lead",
                 image: "/derek-kirschbaum.png",
                 bio: "UCSB Computer Science."
             },
             {
                 name: "Aryaman Singh",
-                role: "Student",
+                role: "Dev Team Lead",
                 image: "/aryaman-singh.png",
-                bio: "UCSB Computer Science."
-            },
-            {
-                name: "Sai Vamsi Aliseti",
-                role: "Student",
-                image: "/sai-vamsi-aliseti.png",
                 bio: "UCSB Computer Science."
             },
         ]
