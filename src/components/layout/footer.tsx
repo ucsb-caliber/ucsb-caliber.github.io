@@ -39,11 +39,6 @@ export function Footer() {
                                     Contact
                                 </a>
                             </li>
-                            <li>
-                                <a href={CONTENT.common.links.github} target="_blank" rel="noopener noreferrer" className="text-base text-slate-500 hover:text-aurora-blue transition-colors">
-                                    GitHub
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </div>
