@@ -12,7 +12,8 @@ export default function ResearchPage() {
 
                 <div className="relative z-10 text-center max-w-2xl mx-auto">
                     <h1 className="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight mb-8">
-                        Research coming <span className="text-transparent bg-clip-text bg-gradient-to-r from-aurora-blue to-aurora-purple">soon.</span>
+                        Research <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-aurora-blue to-aurora-purple">coming soon.</span>
                     </h1>
 
                     <p className="text-xl text-slate-600 leading-relaxed font-medium mb-12">
