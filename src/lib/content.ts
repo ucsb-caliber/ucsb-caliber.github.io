@@ -105,34 +105,115 @@ export const CONTENT = {
         title: "Our Team",
         expectations: "We build fast, ship often, and care deeply about academic integrity and user experience.",
         members: [
+            // Leadership
             {
                 name: "Dr. Diba Mirza",
                 role: "Faculty",
-                image: "/diba-mirza.png",
+                image: "/team/diba-mirza.png",
                 bio: "Associate Professor of Teaching, UCSB Computer Science."
             },
             {
                 name: "Sai Vamsi Aliseti",
-                role: "Research and Development Team",
-                image: "/sai-vamsi-aliseti.png",
+                role: "Graduate Student Mentor",
+                image: "/team/sai-vamsi-aliseti.png",
                 bio: "UCSB Computer Science."
             },
             {
                 name: "Nikhil Kapasi",
-                role: "Research and Development Team",
-                image: "/nikhil-kapasi.png",
+                role: "Team Lead",
+                image: "/team/nikhil-kapasi.png",
                 bio: "UCSB Computer Science."
             },
             {
                 name: "Derek Kirschbaum",
-                role: "Dev Team Lead",
-                image: "/derek-kirschbaum.png",
+                role: "Leadership",
+                image: "/team/derek-kirschbaum.jpg",
                 bio: "UCSB Computer Science."
             },
             {
                 name: "Aryaman Singh",
-                role: "Dev Team Lead",
-                image: "/aryaman-singh.png",
+                role: "Leadership",
+                image: "/team/aryaman-singh.png",
+                bio: "UCSB Computer Science."
+            },
+            // R&D Team
+            {
+                name: "Mahasvin",
+                role: "Research and Development Team",
+                image: "/team/mahasvin.jpeg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Mason Le",
+                role: "Research and Development Team",
+                image: "/team/mason-le.png",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Nandini Dharwadkar",
+                role: "Research and Development Team",
+                image: "/team/nandini-dharwadkar.jpeg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Olivia He",
+                role: "Research and Development Team",
+                image: "/team/olivia-he.jpg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Naz Oguz",
+                role: "Research and Development Team",
+                image: "/team/naz-oguz.png",
+                bio: "UCSB Computer Science."
+            },
+            // Dev Team
+            {
+                name: "Austin Li",
+                role: "Dev Team",
+                image: "/team/austin-li.jpg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Devesh Mamidi",
+                role: "Dev Team",
+                image: "/team/devesh-mamidi.png",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Jay Joo",
+                role: "Dev Team",
+                image: "/team/jay-joo.jpg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Nathan Ngo",
+                role: "Dev Team",
+                image: "/team/nathan-ngo.jpg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Nicholas Kamenica",
+                role: "Dev Team",
+                image: "/team/nicholas-kamenica.jpeg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Pavani Kshirsagar",
+                role: "Dev Team",
+                image: "/team/pavani-kshirsagar.jpg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Simon Yan",
+                role: "Dev Team",
+                image: "/team/simon-yan.jpg",
+                bio: "UCSB Computer Science."
+            },
+            {
+                name: "Vincent Nguyen",
+                role: "Dev Team",
+                image: "/team/vincent-nguyen.jpg",
                 bio: "UCSB Computer Science."
             },
         ]
