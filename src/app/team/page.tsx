@@ -89,11 +89,19 @@ function TeamMemberCard({ member, size = "small" }: TeamMemberCardProps) {
                 />
             </div>
             <h3 className={cn(
-                "font-bold text-slate-900",
-                isLarge ? "text-lg" : "text-base"
+                "text-slate-900 mb-1",
+                isLarge ? "text-xl font-extrabold tracking-tight" : "text-base font-bold"
             )}>{member.name}</h3>
-            <p className="text-aurora-blue font-bold text-[9px] mb-1 uppercase tracking-widest">{member.role}</p>
-            {isLarge && <p className="text-aurora-blue font-bold leading-relaxed text-xs max-w-xs">{member.bio}</p>}
+            {member.role && (
+                <p className="text-aurora-blue font-bold text-[9px] mb-0.5 uppercase tracking-widest leading-none">
+                    {member.role}
+                </p>
+            )}
+            {isLarge && member.bio && (
+                <p className="text-aurora-blue font-bold leading-relaxed text-[11px] max-w-xs transition-colors">
+                    {member.bio}
+                </p>
+            )}
         </div>
     );
 }
