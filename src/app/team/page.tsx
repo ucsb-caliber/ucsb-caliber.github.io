@@ -68,7 +68,7 @@ export default function TeamPage() {
 }
 
 interface TeamMemberCardProps {
-    member: typeof CONTENT.team.members[0];
+    member: typeof CONTENT.team.members[number];
     size?: "small" | "large";
 }
 
@@ -77,17 +77,37 @@ function TeamMemberCard({ member, size = "small" }: TeamMemberCardProps) {
 
     return (
         <div className="group flex flex-col items-center text-center">
-            <div className={cn(
-                "relative overflow-hidden rounded-full bg-slate-100 mb-6 border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300 group-hover:shadow-xl group-hover:border-aurora-blue/20",
-                isLarge ? "h-48 w-48" : "h-40 w-40"
-            )}>
-                <Image
-                    src={getAssetPath(member.image)}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                />
-            </div>
+            {member.linkedin ? (
+                <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                        "relative block overflow-hidden rounded-full bg-slate-100 mb-6 border-4 border-white shadow-lg",
+                        "hover:scale-105 transition-transform duration-300 hover:shadow-xl hover:border-aurora-blue/20 cursor-pointer",
+                        isLarge ? "h-48 w-48" : "h-40 w-40"
+                    )}
+                >
+                    <Image
+                        src={getAssetPath(member.image)}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                    />
+                </a>
+            ) : (
+                <div className={cn(
+                    "relative overflow-hidden rounded-full bg-slate-100 mb-6 border-4 border-white shadow-lg",
+                    isLarge ? "h-48 w-48" : "h-40 w-40"
+                )}>
+                    <Image
+                        src={getAssetPath(member.image)}
+                        alt={member.name}
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+            )}
             <h3 className={cn(
                 "text-slate-900 mb-1",
                 isLarge ? "text-xl font-extrabold tracking-tight" : "text-base font-bold"
