@@ -7,7 +7,8 @@ export default function TeamPage() {
         m.role === "Faculty" ||
         m.role === "Graduate Student Mentor" ||
         m.role === "Team Lead" ||
-        m.role === "Leadership"
+        m.role === "Leadership" ||
+        m.role === "Development Team Lead"
     );
 
     const rdTeam = CONTENT.team.members.filter(m =>

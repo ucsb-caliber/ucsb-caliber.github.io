@@ -110,31 +110,31 @@ export const CONTENT = {
                 name: "Dr. Diba Mirza",
                 role: "Faculty",
                 image: "/team/diba-mirza.png",
-                bio: "Associate Professor of Teaching, UCSB Computer Science."
+                bio: "Teaching Professor and Vice Chair."
             },
             {
                 name: "Sai Vamsi Aliseti",
                 role: "Graduate Student Mentor",
                 image: "/team/sai-vamsi-aliseti.png",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Nikhil Kapasi",
                 role: "Team Lead",
                 image: "/team/nikhil-kapasi.png",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Derek Kirschbaum",
-                role: "Leadership",
+                role: "Development Team Lead",
                 image: "/team/derek-kirschbaum.jpg",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             {
                 name: "Aryaman Singh",
-                role: "Leadership",
+                role: "Development Team Lead",
                 image: "/team/aryaman-singh.png",
-                bio: "UCSB Computer Science."
+                bio: ""
             },
             // R&D Team
             {
