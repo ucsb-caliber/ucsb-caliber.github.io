@@ -1,11 +1,9 @@
 import { CONTENT } from "@/lib/content";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
 
 export default function OurStoryPage() {
     return (
         <main className="min-h-screen bg-white flex flex-col">
-            <Navbar />
+
             <div className="flex-grow pt-32 pb-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto">
                     <h1 className="text-4xl font-bold text-slate-900 tracking-tight sm:text-5xl mb-6">
@@ -24,7 +22,7 @@ export default function OurStoryPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
+
         </main>
     );
 }

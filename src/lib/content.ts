@@ -107,20 +107,6 @@ export const CONTENT = {
         members: [
             // Leadership
             {
-                name: "Dr. Diba Mirza",
-                role: "Faculty Advisor",
-                image: "/team/diba-mirza.png",
-                bio: "Teaching Professor and Vice Chair",
-                linkedin: "https://www.linkedin.com/in/diba-mirza-b3150914b/"
-            },
-            {
-                name: "Sai Vamsi Aliseti",
-                role: "Graduate Student Mentor",
-                image: "/team/sai-vamsi-aliseti.png",
-                bio: "",
-                linkedin: "https://www.linkedin.com/in/sai-vamsi-aliseti/"
-            },
-            {
                 name: "Nikhil Kapasi",
                 role: "Team Lead",
                 image: "/team/nikhil-kapasi.png",
@@ -140,6 +126,20 @@ export const CONTENT = {
                 image: "/team/aryaman-singh.png",
                 bio: "",
                 linkedin: "https://www.linkedin.com/in/aryaman-singh-7376b8284/"
+            },
+            {
+                name: "Sai Vamsi Aliseti",
+                role: "Graduate Student Mentor",
+                image: "/team/sai-vamsi-aliseti.png",
+                bio: "",
+                linkedin: "https://www.linkedin.com/in/sai-vamsi-aliseti/"
+            },
+            {
+                name: "Dr. Diba Mirza",
+                role: "Faculty Advisor",
+                image: "/team/diba-mirza.png",
+                bio: "Teaching Professor and Vice Chair",
+                linkedin: "https://www.linkedin.com/in/diba-mirza-b3150914b/"
             },
             // R&D Team
             {

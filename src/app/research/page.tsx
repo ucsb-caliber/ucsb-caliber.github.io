@@ -1,11 +1,9 @@
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
 import RetroGrid from "@/components/ui/retro-grid";
 
 export default function ResearchPage() {
     return (
         <main className="min-h-screen bg-white flex flex-col relative overflow-hidden">
-            <Navbar />
+
 
             <div className="flex-grow flex flex-col items-center justify-center relative px-4">
                 <RetroGrid className="opacity-10" />
@@ -32,7 +30,7 @@ export default function ResearchPage() {
                 </div>
             </div>
 
-            <Footer />
+
         </main>
     )
 }
