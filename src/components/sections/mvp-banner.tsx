@@ -13,10 +13,13 @@ export function MVPBanner() {
                     </div>
                     <div className="flex-1 text-center md:text-left">
                         <h3 className="text-2xl font-bold text-slate-900 mb-2">{CONTENT.home.mvpBanner.title}</h3>
+                        <p className="text-sm md:text-base font-medium leading-7 text-slate-600">
+                            {CONTENT.home.mvpBanner.description}
+                        </p>
                     </div>
                     <div className="flex-shrink-0">
                         <div className="inline-flex items-center px-4 py-2 rounded-lg bg-white border border-white/50 text-aurora-purple text-sm font-bold tracking-wide uppercase shadow-sm">
-                            Active Construction
+                            Course Pilots
                         </div>
                     </div>
                 </div>

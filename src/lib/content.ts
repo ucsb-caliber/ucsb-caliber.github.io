@@ -58,8 +58,8 @@ export const CONTENT = {
             ],
         },
         mvpBanner: {
-            title: "Current Status: MVP Development",
-            description: "Our end-of-quarter goal is a fully scoped instructor frontend and a minimal student frontend for pilots.",
+            title: "Caliber is piloting in UCSB computer science courses.",
+            description: "We are working with course staff and students to refine AI-assisted course planning, assignment generation, and mastery tracking in live teaching contexts.",
         },
         blog: [
             {
