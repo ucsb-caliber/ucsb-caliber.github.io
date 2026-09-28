@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import { CONTENT } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
@@ -25,7 +24,7 @@ export function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
-                scrolled ? "bg-card/80 backdrop-blur-md border-white/5 shadow-sm" : "bg-transparent"
+                scrolled ? "bg-[#faf9f4]/95 backdrop-blur-md border-[#dce7de] shadow-sm" : "bg-[#f7f5ed]"
             )}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,7 +56,7 @@ export function Navbar() {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-slate-600 hover:text-slate-900 focus:outline-none"
+                            className="text-slate-600 hover:text-slate-900 focus:outline-none" aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen}
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </button>
@@ -67,7 +66,7 @@ export function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-card border-b border-white/10">
+                <div className="md:hidden bg-[#f7f5ed] border-b border-[#dce7de]">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {CONTENT.nav.links.map((link) => (
                             <Link
@@ -77,8 +76,8 @@ export function Navbar() {
                                 className={cn(
                                     "block px-3 py-2 rounded-md text-base font-medium",
                                     pathname === link.href
-                                        ? "bg-white/10 text-ucsb-gold"
-                                        : "text-slate-300 hover:bg-white/5 hover:text-white"
+                                        ? "bg-[#e4eee8] text-[#176c75]"
+                                        : "text-slate-700 hover:bg-[#e4eee8] hover:text-[#176c75]"
                                 )}
                             >
                                 {link.label}
