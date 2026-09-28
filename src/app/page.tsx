@@ -1,23 +1,40 @@
-import { Hero } from "@/components/sections/hero";
-import { Credibility } from "@/components/sections/credibility";
-import { Features } from "@/components/sections/features";
-import { Timeline } from "@/components/sections/timeline";
-import { MVPBanner } from "@/components/sections/mvp-banner";
-import RetroGrid from "@/components/ui/retro-grid";
+import Link from "next/link";
+import { ArrowRight, BookOpen, BrainCircuit, ChartNoAxesCombined, Check, Layers3, Sparkles } from "lucide-react";
+
+const pillars = [
+  { number: "01", icon: Layers3, title: "Map the course", text: "Connect materials, concepts, and learning goals so each activity has a place in the bigger picture." },
+  { number: "02", icon: BrainCircuit, title: "Practice with purpose", text: "Give students questions and explanations grounded in what their course actually teaches." },
+  { number: "03", icon: ChartNoAxesCombined, title: "See what comes next", text: "Use evidence from practice to spot gaps and inform the next teaching decision." },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-0 relative">
-      <div className="relative overflow-hidden pt-32 pb-32 md:pt-48 md:pb-48">
-        <RetroGrid className="opacity-20" />
-        <div className="relative z-10 text-center">
-          <Hero />
+    <div className="site-home">
+      <section className="home-hero">
+        <div className="hero-orbit orbit-one" aria-hidden="true" /><div className="hero-orbit orbit-two" aria-hidden="true" />
+        <div className="home-shell hero-grid">
+          <div className="hero-copy">
+            <div className="eyebrow"><span className="eyebrow-dot" /> Built at UC Santa Barbara</div>
+            <h1>The future of learning is <em>personal.</em></h1>
+            <p>Meet Caliber: an AI-powered learning platform built with UCSB classrooms. We connect what instructors teach, how students practice, and what each learner needs next.</p>
+            <div className="hero-actions"><Link className="home-button primary" href="/product">Explore the platform <ArrowRight size={18} /></Link><Link className="home-button secondary" href="/our-story">Our story <ArrowRight size={17} /></Link></div>
+            <div className="hero-note"><span className="note-line" /> Built in the classroom. Driven by research. Ready to grow.</div>
+          </div>
+          <div className="hero-visual" aria-label="Illustration of course concepts connected to practice and feedback">
+            <div className="visual-header"><span className="visual-mark">c<span>.</span></span><span>THE LEARNING LOOP</span><span className="visual-index">01 / 03</span></div>
+            <div className="visual-main">
+              <div className="visual-label">FROM CONTENT TO UNDERSTANDING</div>
+              <div className="concept-map"><div className="map-line line-a"/><div className="map-line line-b"/><div className="map-line line-c"/><div className="map-node node-one"><BookOpen size={20}/><span>Course material</span></div><div className="map-node node-two"><Sparkles size={21}/><span>Practice</span></div><div className="map-node node-three"><BrainCircuit size={21}/><span>Understanding</span></div></div>
+              <div className="insight-card"><div className="insight-icon"><Check size={18}/></div><div><strong>Make every step count</strong><span>Learning signals become useful insight.</span></div><ArrowRight size={17}/></div>
+            </div>
+            <div className="visual-footer"><span>CALIBER / UCSB</span><span>LEARN · PRACTICE · GROW</span></div>
+          </div>
         </div>
-      </div>
-      <Features />
-      <Timeline />
-      <MVPBanner />
-      <Credibility />
+      </section>
+      <section className="intro-section" id="approach"><div className="home-shell intro-grid"><div className="section-kicker">THE IDEA</div><div><h2>A smarter learning loop for every classroom.</h2><p>Caliber brings course knowledge, adaptive practice, and actionable insight into one experience. Students get a path forward. Instructors get a clearer view of where to help.</p></div></div></section>
+      <section className="approach-section"><div className="home-shell"><div className="section-top"><div><div className="section-kicker">HOW IT COMES TOGETHER</div><h2>One connected learning experience.</h2></div><p>Designed to support the flow from instructor planning to student practice and back to actionable insight.</p></div><div className="pillar-grid">{pillars.map(({number,icon:Icon,title,text})=><article className="pillar" key={number}><div className="pillar-top"><span>{number} / 03</span><Icon size={28} strokeWidth={1.6}/></div><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+      <section className="research-band"><div className="home-shell research-grid"><div><div className="section-kicker light">RESEARCH IN PRACTICE</div><h2>Built with the classroom, shaped by the questions it raises.</h2></div><div><p>Caliber is a student and faculty research effort at UCSB. We investigate how course structure, AI-assisted learning tools, and evidence of student understanding can work together in real teaching contexts.</p><Link href="/research" className="text-link">Explore our research <ArrowRight size={18}/></Link></div></div></section>
+      <section className="closing-section"><div className="home-shell closing-grid"><div><div className="section-kicker">PEOPLE BEHIND THE WORK</div><h2>Built by educators and engineers who care.</h2><p>Meet the students, mentors, and faculty building Caliber at UC Santa Barbara.</p><Link className="home-button primary" href="/team">Meet the team <ArrowRight size={18}/></Link></div><div className="closing-symbol" aria-hidden="true">c<span>.</span></div></div></section>
     </div>
   );
 }
