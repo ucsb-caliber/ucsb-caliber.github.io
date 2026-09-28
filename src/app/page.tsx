@@ -1,36 +1,19 @@
-import { LearningLoop } from "@/components/sections/learning-loop";
-import { WorkflowExplorer } from "@/components/sections/workflow-explorer";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BrainCircuit, ChartNoAxesCombined, Layers3 } from "lucide-react";
-
-const pillars = [
-  { number: "01", icon: Layers3, title: "Map the course", text: "Connect materials, concepts, and learning goals so each activity has a place in the bigger picture." },
-  { number: "02", icon: BrainCircuit, title: "Practice with purpose", text: "Give students questions and explanations grounded in what their course actually teaches." },
-  { number: "03", icon: ChartNoAxesCombined, title: "See what comes next", text: "Use evidence from practice to spot gaps and inform the next teaching decision." },
-];
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { WorkflowExplorer } from "@/components/sections/workflow-explorer";
 
 export default function Home() {
-  return (
-    <div className="site-home">
-      <section className="home-hero">
-        <div className="hero-aurora" aria-hidden="true"><span/><span/><span/></div><div className="hero-grid-lines" aria-hidden="true"/>
-        <div className="hero-orbit orbit-one" aria-hidden="true" /><div className="hero-orbit orbit-two" aria-hidden="true" />
-        <div className="home-shell hero-grid">
-          <div className="hero-copy">
-            <div className="eyebrow"><span className="eyebrow-dot" /> Built at UC Santa Barbara</div>
-            <h1>The future of learning is <em>personal.</em></h1>
-            <p>Meet Caliber: an AI-powered learning platform built with UCSB classrooms. We connect what instructors teach, how students practice, and what each learner needs next.</p>
-            <div className="hero-actions"><Link className="home-button primary" href="/product">Explore the platform <ArrowRight size={18} /></Link><Link className="home-button secondary" href="/our-story">Our story <ArrowRight size={17} /></Link></div>
-            <div className="hero-note"><span className="note-line" /> Built in the classroom. Driven by research. Ready to grow.</div>
-          </div>
-          <LearningLoop />
-        </div>
-      </section>
-      <section className="intro-section" id="approach"><div className="home-shell intro-grid"><div className="section-kicker">THE IDEA</div><div><h2>A smarter learning loop for every classroom.</h2><p>Caliber brings course knowledge, adaptive practice, and actionable insight into one experience. Students get a path forward. Instructors get a clearer view of where to help.</p></div></div></section>
-      <section className="approach-section"><div className="home-shell"><div className="section-top"><div><div className="section-kicker">HOW IT COMES TOGETHER</div><h2>One connected learning experience.</h2></div><p>Designed to support the flow from instructor planning to student practice and back to actionable insight.</p></div><div className="pillar-grid">{pillars.map(({number,icon:Icon,title,text})=><article className="pillar" key={number}><div className="pillar-top"><span>{number} / 03</span><Icon size={28} strokeWidth={1.6}/></div><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
-      <WorkflowExplorer />
-      <section className="research-band"><div className="home-shell research-grid"><div><div className="section-kicker light">RESEARCH IN PRACTICE</div><h2>Built with the classroom, shaped by the questions it raises.</h2></div><div><p>Caliber is a student and faculty research effort at UCSB. We investigate how course structure, AI-assisted learning tools, and evidence of student understanding can work together in real teaching contexts.</p><Link href="/research" className="text-link">Explore our research <ArrowRight size={18}/></Link></div></div></section>
-      <section className="closing-section"><div className="home-shell closing-grid"><div><div className="section-kicker">PEOPLE BEHIND THE WORK</div><h2>Built by educators and engineers who care.</h2><p>Meet the students, mentors, and faculty building Caliber at UC Santa Barbara.</p><Link className="home-button primary" href="/team">Meet the team <ArrowRight size={18}/></Link></div><div className="closing-symbol" aria-hidden="true">c<span>.</span></div></div></section>
-    </div>
-  );
+  return <div className="field-site site-home">
+    <section className="field-hero">
+      <div className="field-masthead"><span>A UCSB project in computing education</span><span>Built with classrooms. Open to what’s next.</span></div>
+      <div className="field-heading"><h1>Built for the moment<br/>it <em>clicks.</em></h1><div className="field-intro"><p>Good questions. Useful practice. A clearer view of what students understand.</p><p>We’re Caliber—a team of students and educators building better tools for learning computer science.</p><Link href="#explore" className="field-link">Take a look inside <ArrowRight size={20}/></Link></div></div>
+      <figure className="field-art"><Image src="/art/learning-landscape.webp" alt="An illustrated sketchbook unfolds into paper staircases and arches beside the California coast, linked by a blue thread." width={1536} height={1024} priority sizes="(max-width: 800px) 100vw, 1200px"/><figcaption><span>01 / MANY WAYS TO UNDERSTAND</span><span>A little structure. A lot of possibility.</span></figcaption><span className="field-stamp" aria-hidden="true">Made<br/>at UCSB<br/><span>↗</span></span></figure>
+    </section>
+    <section className="field-premise"><div className="field-margin">THE QUESTION<br/><span>01 —</span></div><div><h2>What happens between<br/>“I tried” and <em>“I get it”?</em></h2><p>That’s where we work. A course has lectures, assignments, questions, and feedback. Caliber connects those pieces so instructors can see where students need help—and students can find a useful next step.</p></div></section>
+    <section className="field-principles"><article><span>01</span><h3>Start with the course.</h3><p>The syllabus, the concepts, the material you actually taught. Give every question a reason to be there.</p></article><article><span>02</span><h3>Make practice count.</h3><p>Connect questions and explanations to learning goals. Keep instructors involved in what students see.</p></article><article><span>03</span><h3>Look past the score.</h3><p>Use the evidence in student work to understand the sticking points and decide where to go next.</p></article></section>
+    <div id="explore"><WorkflowExplorer /></div>
+    <section className="field-research"><div className="field-research-art"><Image src="/art/better-questions.webp" alt="A hand with a red pencil draws on layered paper forms that become a coastal landscape." width={1254} height={1254} sizes="(max-width: 750px) 100vw, 500px"/></div><div className="field-research-copy"><span className="field-label">FROM OUR NOTEBOOK</span><h2>Better tools begin<br/>with better <em>questions.</em></h2><p>Our work grows out of UCSB classrooms: how to design useful placement exams, connect practice to course content, and support learning at scale.</p><p>We build, study, and revise. The research is part of the product.</p><Link href="/research" className="field-link">Read the research <ArrowUpRight size={20}/></Link><div className="field-citation">ITiCSE 2026<br/><strong>Caliber: AI-Assisted Infrastructure for Mastery-Based Computer Science Education at Scale</strong></div></div></section>
+    <section className="field-close"><span className="field-label">STUDENTS. EDUCATORS. BUILDERS.</span><h2>A classroom-sized problem.<br/>A team that cares.</h2><div><Link href="/team" className="field-link">Meet the people <ArrowRight size={20}/></Link><a href="mailto:nkapasi@ucsb.edu?subject=Caliber%20collaboration" className="field-link">Build with us <ArrowUpRight size={20}/></a></div></section>
+  </div>;
 }
