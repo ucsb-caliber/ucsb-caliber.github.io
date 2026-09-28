@@ -1,85 +1,10 @@
-import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { ArrowRight, BookOpen, ClipboardCheck, MessageCircle, Network, Sparkles } from "lucide-react";
 
-export default function ProductPage() {
-    return (
-        <div className="bg-white py-24">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-16 max-w-2xl">
-                    <h1 className="text-4xl font-bold text-slate-900 mb-6">Product Roadmap</h1>
-                    <p className="text-xl text-slate-600 leading-relaxed">
-                        We are currently building for the Spring 2026 pilot program.
-                        Our focus is on core instructor workflows first, followed by the student delivery experience.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Now */}
-                    <div className="border border-navy/10 rounded-2xl p-8 bg-navy/5 shadow-sm">
-                        <div className="flex items-center gap-3 mb-8 pb-4 border-b border-navy/10">
-                            <div className="h-3 w-3 rounded-full bg-green-500 animate-pulse"></div>
-                            <h2 className="text-sm font-bold text-navy uppercase tracking-widest">Now (Active)</h2>
-                        </div>
-                        <ul className="space-y-6">
-                            <li className="group">
-                                <div className="flex items-center justify-between mb-2">
-                                    <span className="font-semibold text-slate-900">Outcome Mapping</span>
-                                    <Badge variant="default" className="text-[10px] h-5 px-1.5">BETA</Badge>
-                                </div>
-                                <p className="text-sm text-slate-600">Tagging lecture materials with Bloom&apos;s taxonomy levels.</p>
-                            </li>
-                            <li className="group">
-                                <div className="flex items-center justify-between mb-2">
-                                    <span className="font-semibold text-slate-900">Question Gen</span>
-                                    <Badge variant="default" className="text-[10px] h-5 px-1.5">BETA</Badge>
-                                </div>
-                                <p className="text-sm text-slate-600">AI-assisted creation of practice problems from notes.</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Next */}
-                    <div className="border border-slate-200 rounded-2xl p-8 bg-white">
-                        <div className="flex items-center gap-3 mb-8 pb-4 border-b border-slate-100">
-                            <div className="h-3 w-3 rounded-full bg-gold"></div>
-                            <h2 className="text-sm font-bold text-slate-500 uppercase tracking-widest">Next (Q2)</h2>
-                        </div>
-                        <ul className="space-y-6">
-                            <li className="group">
-                                <div className="flex items-center justify-between mb-2">
-                                    <span className="font-semibold text-slate-900">Student Frontend</span>
-                                    <Badge variant="secondary" className="text-[10px] h-5 px-1.5">DEV</Badge>
-                                </div>
-                                <p className="text-sm text-slate-600">Minimalist interface for taking practice assignments.</p>
-                            </li>
-                            <li className="group">
-                                <div className="flex items-center justify-between mb-2">
-                                    <span className="font-semibold text-slate-900">Mastery View</span>
-                                    <Badge variant="secondary" className="text-[10px] h-5 px-1.5">DEV</Badge>
-                                </div>
-                                <p className="text-sm text-slate-600">Dashboard showing student progress by skill tag.</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Later */}
-                    <div className="border border-slate-100 rounded-2xl p-8 bg-slate-50/50">
-                        <div className="flex items-center gap-3 mb-8 pb-4 border-b border-slate-100">
-                            <div className="h-3 w-3 rounded-full bg-slate-300"></div>
-                            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-widest">Later</h2>
-                        </div>
-                        <ul className="space-y-6 opacity-70">
-                            <li>
-                                <div className="font-semibold text-slate-900 mb-1">Canvas Integration</div>
-                                <p className="text-sm text-slate-500">Deep linking and grade pass-back.</p>
-                            </li>
-                            <li>
-                                <div className="font-semibold text-slate-900 mb-1">Advanced Analytics</div>
-                                <p className="text-sm text-slate-500">Department-level learning outcome reporting.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+const tools = [
+  { icon: Network, title: "A map of what matters", text: "Organize course materials and concepts into a structure that helps practice stay aligned with instruction." },
+  { icon: Sparkles, title: "Practice that meets the moment", text: "Create and review questions, explanations, and activities grounded in the course." },
+  { icon: MessageCircle, title: "Help when students need it", text: "Give students a place to ask questions and work through concepts with course-aware support." },
+  { icon: ClipboardCheck, title: "Assessment with more signal", text: "Explore formats such as reflections, mock interviews, and targeted feedback to see more than a final score." },
+];
+export default function ProductPage(){return <div className="bg-[#f7f5ed] text-[#123146]"><section className="mx-auto max-w-6xl px-5 py-24 sm:px-8"><div className="max-w-4xl"><div className="mb-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[.18em] text-[#23747a]"><BookOpen size={17}/> The Caliber platform</div><h1 className="text-5xl font-bold leading-[1.1] tracking-tight md:text-7xl">A better way to connect teaching and learning.</h1><p className="mt-7 max-w-2xl text-lg leading-8 text-[#5b7073]">Caliber brings course context into the tools students and instructors use every day. Our team builds and studies these workflows with UCSB computer science courses.</p><Link href="/research" className="mt-8 inline-flex items-center gap-3 rounded-md bg-[#176c75] px-6 py-4 font-bold text-white">See the research <ArrowRight size={18}/></Link></div><div className="mt-20 grid gap-4 md:grid-cols-2">{tools.map(({icon:Icon,title,text},i)=><article key={title} className="rounded-xl border border-[#dce7de] bg-white p-8"><div className="mb-12 flex justify-between text-[#23747a]"><Icon size={29} strokeWidth={1.6}/><span className="text-xs font-bold tracking-widest text-[#8ca39e]">0{i+1} / 04</span></div><h2 className="text-2xl font-bold tracking-tight">{title}</h2><p className="mt-3 max-w-md leading-7 text-[#5b7073]">{text}</p></article>)}</div><div className="mt-20 rounded-xl bg-[#123f4d] p-9 text-white md:p-14"><p className="text-xs font-bold uppercase tracking-[.18em] text-[#b8d7c7]">Built alongside educators</p><h2 className="mt-5 max-w-3xl text-3xl font-bold tracking-tight md:text-4xl">The best learning tools are shaped by what happens in the classroom.</h2><p className="mt-5 max-w-2xl leading-7 text-[#d2e0dd]">Caliber is evolving through research, course collaborations, and feedback from the people using it. Features and availability vary by pilot.</p><a href="mailto:nkapasi@ucsb.edu?subject=Caliber%20collaboration" className="mt-8 inline-flex items-center gap-3 font-bold text-[#f7cc80]">Talk with our team <ArrowRight size={18}/></a></div></section></div>}
