@@ -1,97 +1,11 @@
-import { ArrowUpRight, BookOpen, CalendarDays, FileText, MapPin } from "lucide-react";
+import { ArrowUpRight, BookOpen } from "lucide-react";
 
-import RetroGrid from "@/components/ui/retro-grid";
-
-const publication = {
-    title: "Caliber: AI-Assisted Infrastructure for Mastery-Based Computer Science Education at Scale",
-    authors: [
-        "Nikhil Kapasi",
-        "Derek Kirschbaum",
-        "Aryaman Singh",
-        "Diba Mirza",
-    ],
-    venue: "Proceedings of the 31st ACM Conference on Innovation and Technology in Computer Science Education V. 2",
-    shortVenue: "ITiCSE 2026",
-    dates: "July 10-15, 2026",
-    location: "Madrid, Spain",
-    doi: "10.1145/3803401.3811974",
-    isbn: "979-8-4007-2633-0/2026/07",
-    rights: "ACM publication. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).",
-};
+const papers = [
+  { tag: "ITiCSE 2026 · Published", title: "Caliber: AI-Assisted Infrastructure for Mastery-Based Computer Science Education at Scale", authors: "Nikhil Kapasi, Derek Kirschbaum, Aryaman Singh, Diba Mirza", description: "Our platform for connecting course content, AI-assisted assessment, and mastery-oriented learning in computer science.", url: "https://doi.org/10.1145/3803401.3811974", link: "Read the ACM paper" },
+  { tag: "ITiCSE 2026 · Published", title: "Designing Scalable, Context-Adapted CS Placement Exams: An IRT-Based Approach", authors: "Nikhil Kapasi, Sai Vamsi Alisetti, Cindy Zhao, Diba Mirza", description: "Research on placement assessment adapted to course context and designed to work at scale.", url: "https://iticse.acm.org/2026/program/", link: "View the conference program" },
+  { tag: "ITiCSE 2026 · Published", title: "Bridging Academia and Industry: A Structured Model for Running a Successful Computer Engineering Capstone Program", authors: "Yogananda Isukapalli, Nikhil Kapasi", description: "A structured approach to industry-partnered computer engineering capstone education.", url: "https://doi.org/10.1145/3803401.3812006", link: "Read the ACM paper" },
+];
 
 export default function ResearchPage() {
-    return (
-        <main className="min-h-screen bg-white relative overflow-hidden">
-            <RetroGrid className="opacity-10" />
-
-            <section className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-5 py-28 sm:px-8">
-                <div className="max-w-3xl">
-                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-aurora-blue/20 bg-aurora-blue/5 px-3 py-1">
-                        <BookOpen className="h-3.5 w-3.5 text-aurora-blue" aria-hidden="true" />
-                        <span className="text-[11px] font-bold uppercase tracking-widest text-aurora-blue">
-                            Research
-                        </span>
-                    </div>
-
-                    <h1 className="text-5xl font-bold tracking-tight text-slate-950 md:text-7xl">
-                        Publications
-                    </h1>
-
-                    <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-slate-600">
-                        Our work studies how AI-assisted infrastructure can support mastery-based
-                        learning workflows in large-scale computer science education.
-                    </p>
-                </div>
-
-                <article className="mt-14 overflow-hidden rounded-lg border border-slate-200 bg-white/85 shadow-sm backdrop-blur">
-                    <div className="border-b border-slate-200 bg-slate-50/80 px-6 py-4 sm:px-8">
-                        <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-slate-600">
-                            <span className="rounded-full bg-slate-900 px-3 py-1 text-xs uppercase tracking-widest text-white">
-                                {publication.shortVenue}
-                            </span>
-                            <span>{publication.venue}</span>
-                        </div>
-                    </div>
-
-                    <div className="px-6 py-7 sm:px-8 sm:py-8">
-                        <h2 className="max-w-4xl text-2xl font-bold leading-tight text-slate-950 md:text-3xl">
-                            {publication.title}
-                        </h2>
-
-                        <p className="mt-4 text-base font-medium leading-7 text-slate-700">
-                            {publication.authors.join(", ")}
-                        </p>
-
-                        <div className="mt-7 grid gap-4 text-sm text-slate-600 sm:grid-cols-2 lg:grid-cols-4">
-                            <div className="flex items-start gap-3">
-                                <CalendarDays className="mt-0.5 h-4 w-4 text-aurora-blue" aria-hidden="true" />
-                                <span>{publication.dates}</span>
-                            </div>
-                            <div className="flex items-start gap-3">
-                                <MapPin className="mt-0.5 h-4 w-4 text-aurora-blue" aria-hidden="true" />
-                                <span>{publication.location}</span>
-                            </div>
-                            <div className="flex items-start gap-3">
-                                <FileText className="mt-0.5 h-4 w-4 text-aurora-blue" aria-hidden="true" />
-                                <span>ISBN {publication.isbn}</span>
-                            </div>
-                            <a
-                                className="flex items-start gap-3 font-semibold text-slate-900 transition hover:text-aurora-blue"
-                                href={`https://doi.org/${publication.doi}`}
-                                rel="noreferrer"
-                                target="_blank"
-                            >
-                                <ArrowUpRight className="mt-0.5 h-4 w-4 text-aurora-blue" aria-hidden="true" />
-                                <span>DOI {publication.doi}</span>
-                            </a>
-                        </div>
-
-                        <div className="mt-8 border-t border-slate-200 pt-5">
-                            <p className="text-sm leading-6 text-slate-500">{publication.rights}</p>
-                        </div>
-                    </div>
-                </article>
-            </section>
-        </main>
-    );
+  return <div className="min-h-screen bg-[#f7f5ed] text-[#123146]"><section className="mx-auto max-w-6xl px-5 py-24 sm:px-8"><div className="mb-16 max-w-3xl"><div className="mb-5 flex items-center gap-2 text-xs font-bold uppercase tracking-[.18em] text-[#23747a]"><BookOpen size={17}/> Research at Caliber</div><h1 className="text-5xl font-bold tracking-tight md:text-7xl">Ideas tested in real classrooms.</h1><p className="mt-6 text-lg leading-8 text-[#5b7073]">Explore publications by Caliber team lead Nikhil Kapasi: computing education research connected to our platform, plus related work in engineering education.</p></div><div className="grid gap-5">{papers.map(p=><article key={p.title} className="rounded-xl border border-[#dce7de] bg-white p-7 md:p-10"><span className="text-xs font-bold uppercase tracking-[.14em] text-[#28747b]">{p.tag}</span><h2 className="mt-5 max-w-4xl text-2xl font-bold leading-tight md:text-3xl">{p.title}</h2><p className="mt-3 text-sm font-medium text-[#536b70]">{p.authors}</p><p className="mt-5 max-w-3xl leading-7 text-[#5b7073]">{p.description}</p><a href={p.url} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 border-b border-[#176c75] pb-1 font-bold text-[#176c75]">{p.link}<ArrowUpRight size={17}/></a></article>)}</div><p className="mt-8 text-sm text-[#718682]">Selected publications by Nikhil Kapasi. Publication links and venue details are provided with each work.</p></section></div>
 }
