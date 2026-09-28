@@ -2,7 +2,8 @@ export const CONTENT = {
     nav: {
         logo: "UCSB Caliber",
         links: [
-            // { label: "Instructors", href: "/instructors" },
+            { label: "Platform", href: "/product" },
+            { label: "Our Story", href: "/our-story" },
             { label: "Research", href: "/research" },
             { label: "Team", href: "/team" },
         ],
